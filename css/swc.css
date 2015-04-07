@@ -1,3 +1,6 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
+
 /* Card is used only at lessons */
 div.container.card {
 	background-color: white;
@@ -5,7 +8,7 @@ div.container.card {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+    font-family: 'Nanum Brush Script', "Open Sans", "Helvetica", "Arial", sans-serif;
     font-weight: bold;
 }
 
@@ -118,7 +121,7 @@ blockquote.testimonial cite {
 
 /* Main body of pages. */
 body {
-    font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+    font-family: 'Nanum Gothic', "Open Sans", "Helvetica", "Arial", sans-serif;
     color: rgb(03, 03, 03);
 }
 
@@ -290,7 +293,7 @@ div.box {
 div.content div h3 {
     border-bottom: 1px solid #CCCCCC;
     display: block;
-    font-family: Verdana,"BitStream vera Sans";
+    font-family: 'Nanum Brush Script', Verdana,"BitStream vera Sans";
     margin-top: 10px;
     padding: 0 5px 3px;
 }
