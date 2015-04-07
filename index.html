@@ -2,7 +2,7 @@
 layout: workshop
 root: .
 venue: 경기콘텐츠코리아랩 (Content Korea Lab Gyeonggi)
-address: 경기도 성남시 분당구 대왕판교로 645번길 12
+address: 경기도 성남시 분당구 대왕판교로 645번길 12 판교공공지원센터 7층
 country: Korea
 language: 
 latlng: 37.399494,127.10379920000003
@@ -90,7 +90,7 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
 {% if page.latlng %}
 <p>
   <strong>장소:</strong>
-  {{ page.address }}.
+  {{ page.address }}.<br>
   찾아오시는 길
   <a href="//www.openstreetmap.org/?mlat={{ page.latlng | replace:',','&mlon=' }}&zoom=16">OpenStreetMap</a>
   혹은,
@@ -123,7 +123,7 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
 <p>
   <strong>연락처</strong>:
   <ul>
-    <li>교육 참가신청 및 문의: 경기콘텐츠코리아랩, <a href="mailto:sunny@rapa.or.kr">방승애 연구원</a> </li>
+    <li>교육 참가신청 및 문의: 경기콘텐츠코리아랩, <a href="mailto:seungae@snip.or.kr">방승애 연구원</a> </li>
     <li>교육 과정: XWMOOC, 이광춘 강사,  
       {% if page.contact %}
          <a href='mailto:{{page.contact}}'>{{page.contact}}</a>
