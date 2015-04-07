@@ -1,18 +1,18 @@
 ---
 layout: workshop
 root: .
-venue: FIXME (brief name of host site)
-address: FIXME (street address of home location)
-country: FIXME (country (hyphenated if need be, like 'United-Kingdom')
-language: FIXME (language code like 'en' or 'fr')
-latlng: (fractional latitude and longitude like 41.7901128,-87.6007318)
-humandate: FIXME (use the format 'Feb 17-18, 2020' (without the quotes)
-humantime: FIXME (use the format '9:00 am - 4:30 pm' (without the quotes)
-startdate: FIXME (use YYYY-MM-DD format like 2015-01-01)
-enddate: FIXME (use YYYY-MM-DD format like 2015-01-02)
-instructor: (list of names like ["Kay McNulty", "Betty Jennings", "Betty Snyder"])
-helper: (list of names like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"])
-contact: FIXME (contact email address for workshop organizer)
+venue: 경기콘텐츠코리아랩 (Content Korea Lab Gyeonggi)
+address: 경기도 성남시 분당구 대왕판교로 645번길 12
+country: Korea
+language: 
+latlng: 37.399494,127.10379920000003
+humandate: Apr 29-30, 2015
+humantime: 9:30 am - 5:30 pm
+startdate: 2015-04-29
+enddate: 2015-04-30
+instructor: ["이광춘 xwMOOC"]
+helper: ["서덕래"]
+contact: i@xwmooc.net
 etherpad: # FIXME (insert the URL for your Etherpad if you're using one)
 eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 1234567890AB key for Eventbrite registration)
 ---
@@ -51,20 +51,19 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
   the pitch.
 -->
 <p>
-  <a href="{{site.swc_site}}">Software Carpentry</a>'s mission
-  is to help scientists and engineers get more research done in less
-  time and with less pain by teaching them basic lab skills for
-  scientific computing.  This hands-on workshop will cover basic
-  concepts and tools, including program design, version control, data
-  management, and task automation.  Participants will be encouraged to
-  help one another and to apply what they have learned to their own
-  research problems.
+  <a href="{{site.swc_site}}">Software Carpentry</a>의 미션은 
+  좀더 생산적으로 연구를 수행하기 위해서 과학, 공학, 의학 분야의 지식근로자에게 과학 컴퓨팅(scientific computing) 기본적인 기술을 가르친다. <a href="http://www.xwmooc.net">xwMOOC</a>도 대한민국과 한국어를 이해하는 모든 사람을 위해 무료 정보교육으로 더불어 사는 세상 만들는 프로젝트를 진행합니다.
+  단, 2일간 실습위주(hands-on) 워크숍 교육을 통해서 비전산 전공자들이 접하지 못한 컴퓨터적 및 통계적 사고, 프로그래밍과 코딩, 컴퓨터 유창성, 컴퓨터 과학 언플러그드, 프로그램 설계, 버젼 관리, 데이터 관리, 업무 자동화, 클라우드를 학습합니다.
+  모든 워크샵 참여자가 서로 돕고 학습한 것을 본인 업무에 적용하길 기대합니다.
 </p>
 <p align="center">
   <em>
-    For more information on what we teach and why,
-    please see our paper
+    소프트웨어 카펜트리에 대한 좀더 자세한 사항은 다음 논문을 참고바랍니다.
     "<a href="http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745">Best Practices for Scientific Computing</a>".
+  </em>
+    <em>
+    한국 xwMOOC 프로젝트에 대한 자세한 사항은 다음 웹사이트를 참조바랍니다. 
+    "<a href="http://www.xwmooc.net/about/">Think Like Computer and Data Scientists</a>".
   </em>
 </p>
 
@@ -75,8 +74,8 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
   workshop is only open to people from a particular institution.
 -->
 <p>
-  <strong>Who:</strong>
-  The course is aimed at graduate students and other researchers.
+  <strong>교육 대상:</strong>
+  데이터 과학자, 대학원 및 과학/공학 연구원, 과학/공학 기반 스타트업 준비 혹은 스타트업 기업인.
 </p>
 
 <!--
@@ -89,12 +88,12 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
 -->
 {% if page.latlng %}
 <p>
-  <strong>Where:</strong>
-  {{page.address}}.
-  Get directions with
-  <a href="//www.openstreetmap.org/?mlat={{page.latlng | replace:',','&mlon='}}&zoom=16">OpenStreetMap</a>
-  or
-  <a href="//maps.google.com/maps?q={{page.latlng}}">Google Maps</a>.
+  <strong>장소:</strong>
+  {{ page.address }}.
+  찾아오시는 길
+  <a href="//www.openstreetmap.org/?mlat={{ page.latlng | replace:',','&mlon=' }}&zoom=16">OpenStreetMap</a>
+  혹은,
+  <a href="//maps.google.com/maps?q={{ page.latlng }}">구글 지도</a>.
 </p>
 {% endif %}
 
@@ -104,11 +103,13 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
   Modify the block below if there are any special requirements.
 -->
 <p>
-  <strong>Requirements:</strong> Participants must bring a laptop with
-  a few specific software packages installed (listed
-  <a href="#setup">below</a>). They are also required to abide by
-  Software Carpentry's
-  <a href="{{site.swc_site}}/conduct.html">Code of Conduct</a>.
+  <strong>교육 준비물:</strong>
+  <ul>
+    <li><a href="http://statkclee.github.io/xwmooc-sc/conduct.html">행동강령(code of conduct) 준수.</li>
+    <li><a href="http://statkclee.github.io/csunplugged-md/csunplugged/">컴퓨터 과학 언플러그드</a> 예습.</li>
+    <li><a href="http://rur-ple.xwmooc.net/">러플(RUR-PLE), 파이썬 배우기: 러플로 아이들이 놀기!</a> 예습.</li>
+    <li><a href="http://python.xwmooc.net/">정보교육을 위한 파이썬</a> 예습. </li>
+  </ul>
 </p>
 
 <!--
@@ -119,14 +120,17 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
   used.
 -->
 <p>
-  <strong>Contact</strong>:
-  Please mail
-  {% if page.contact %}
-    <a href='mailto:{{page.contact}}'>{{page.contact}}</a>
-  {% else %}
-    <a href='mailto:{{site.contact}}'>{{site.contact}}</a>
-  {% endif %}
-  for more information.
+  <strong>연락처</strong>:
+  <ul>
+    <li>교육 참가신청 및 문의: 경기콘텐츠코리아랩, <a href="mailto:sunny@rapa.or.kr">방승애 연구원</a> </li>
+    <li>교육 과정: XWMOOC, 이광춘 강사,  
+      {% if page.contact %}
+         <a href='mailto:{{page.contact}}'>{{page.contact}}</a>
+      {% else %}
+         <a href='mailto:{{site.contact}}'>{{site.contact}}</a>
+      {% endif %}</li>
+    <li>향후 교육과정 안내: 소프트웨어 카펜트리 교육을 희망하시는 분은 xwMOOC 이광춘 강사에게 연락처를 남겨주시면 다음 교육에 안내드리겠습니다.</li>
+  </ul>
 </p>
 
 <hr/>
@@ -138,29 +142,50 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
   to match your plans.  You may also want to change 'Day 1' and 'Day
   2' to be actual dates or days of the week.
 -->
-<h2>Schedule</h2>
+
+<p>
+  <strong>후원</strong>
+  <div class="row-fluid">
+   <div class="span6">
+    <table class="table table-striped">
+      <tr> 
+        <td> <a href="https://www.facebook.com/gcon.lab" target="_blank"><img src="./img/content-korea-lab.jpg"></a>
+        </td>
+        <td> <a href="https://www.snip.or.kr" target="_blank"><img src="./img/snip.jpeg"></a>
+        </td>
+        <td> A 기관
+        </td>
+        <td> B 기관
+        </td>
+      </tr>
+    </table>
+   </div>
+  </div>
+</p>
+
+<h2>교육 스케쥴</h2>
 
 <div class="row">
   <div class="col-md-6">
-    <h3>Day 1</h3>
+    <h3>1 일차</h3>
     <table class="table table-striped">
-      <tr> <td>09:00</td>  <td>Automating tasks with the Unix shell</td> </tr>
-      <tr> <td>10:30</td> <td>Coffee</td> </tr>
-      <tr> <td>12:00</td>  <td>Lunch break</td> </tr>
-      <tr> <td>13:00</td>  <td>Building programs with Python</td> </tr>
-      <tr> <td>14:30</td>  <td>Coffee</td> </tr>
-      <tr> <td>16:00</td>  <td>Wrap-up</td> </tr>
+      <tr> <td>09:30</td> <td>작업 자동화 (유닉스 쉘)</td> </tr>
+      <tr> <td><em>10:20</em></td> <td><em>커피 시간</em></td> </tr>
+      <tr> <td>12:00</td> <td>점심 시간</td> </tr>
+      <tr> <td>13:00</td> <td>R 프로그래밍</td> </tr>
+      <tr> <td><em>14:30</em></td> <td><em>커피 시간</em></td> </tr>
+      <tr> <td>17:00</td> <td>Wrap-up</td> </tr>
     </table>
   </div>
   <div class="col-md-6">
-    <h3>Day 2</h3>
+    <h3>2 일차</h3>
     <table class="table table-striped">
-      <tr> <td>09:00</td>  <td>Version control with Git</td> </tr>
-      <tr> <td>10:30</td>  <td>Coffee</td> </tr>
-      <tr> <td>12:00</td>  <td>Lunch break</td> </tr>
-      <tr> <td>13:00</td>  <td>Managing data with SQL</td> </tr>
-      <tr> <td>14:30</td>  <td>Coffee</td> </tr>
-      <tr> <td>16:00</td>  <td>Wrap-up</td> </tr>
+      <tr> <td>09:30</td> <td>버젼관리(Git)</td> </tr>
+      <tr> <td><em>10:30</em></td> <td><em>커피 시간</em></td> </tr>
+      <tr> <td>12:00</td> <td>점심 시간</td> </tr>
+      <tr> <td>13:00</td> <td>데이터 관리(SQL)</td> </tr>
+      <tr> <td><em>14:30</em></td> <td><em>커피 시간</em></td> </tr>
+      <tr> <td>17:00</td> <td>Wrap-up</td> </tr>
     </table>
   </div>
 </div>
@@ -181,7 +206,7 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
 <p>
   <strong>Etherpad:</strong> <a href="{{page.etherpad}}">{{page.etherpad}}</a>.
   <br/>
-  We will use this Etherpad for chatting, taking notes, and sharing URLs and bits of code.
+  수강생과 좀더 효과적인 워크샵 교육을 위해서 모질라 이더패드(Etherpad)를 사용하여 코드, URL, 강의 노트, 질의 응답을 진행합니다.
 </p>
 {% endif %}
 
@@ -208,72 +233,72 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
 
 <div class="row">
   <div class="col-md-6">
-    <h3>The Unix Shell</h3>
+    <h3>유닉스 쉘</h3>
     <ul>
-      <li>Files and directories</li>
-      <li>History and tab completion</li>
-      <li>Pipes and redirection</li>
-      <li>Looping over files</li>
-      <li>Creating and running shell scripts</li>
-      <li>Finding things</li>
-      <li><a href="{{site.swc_lessons}}/ref/01-shell.html">Reference...</a></li>
+    <li>쉘(shell) 소개</li>
+    <li>파일과 디렉토리</li>
+    <li>파일과 디렉토리 생성</li>
+    <li>파이프(pipe)와 필터(filter)</li>
+    <li>루프(Loops)</li>
+    <li>쉘 스크립트(shell script)</li>
+    <li>파일, 문자, 디렉토리  등 찾기</li>
+      <li><a href="http://statkclee.github.io/xwmooc-sc/novice/shell/">Reference...</a></li>
     </ul>
   </div>
   <div class="col-md-6">
-    <h3>Programming in Python</h3>
+    <h3>파이썬 프로그래밍</h3>
     <ul>
-      <li>Using libraries</li>
-      <li>Working with arrays</li>
-      <li>Reading and plotting data</li>
-      <li>Creating and using functions</li>
-      <li>Loops and conditionals</li>
-      <li>Defensive programming</li>
-      <li>Using Python from the command line</li>
-      <li><a href="{{site.swc_lessons}}/ref/03-python.html">Reference...</a></li>
+    <li>환자 데이터(Patient Data) 분석</li>
+    <li>함수 생성</li>
+    <li>다수의 데이터셋 분석</li>
+    <li>조건 선택</li>
+    <li>방어적 프로그래밍(Defensive Programming)</li>
+    <li>명령-라인(Command-Line) 프로그램</li>
+      <li><a href="http://statkclee.github.io/xwmooc-sc/novice/python/">Reference...</a></li>
     </ul>
   </div>
-  <!--
+
   <div class="col-md-6">
-    <h3>Programming in R</h3>
+    <h3>R 프로그래밍</h3>
     <ul>
-      <li>Working with vectors and data frames</li>
-      <li>Reading and plotting data</li>
-      <li>Creating and using functions</li>
-      <li>Loops and conditionals</li>
-      <li>Using R from the command line</li>
-      <li><a href="{{site.swc_lessons}}/ref/06-R.html">Reference...</a></li>
+    <li>환자 데이터(Patient Data) 분석</li>
+    <li>함수 생성</li>
+    <li>다수의 데이터셋 분석</li>
+    <li>조건 선택</li>
+    <li>명령-라인(Command-Line) 프로그램</li>
+      <li><a href="http://statkclee.github.io/xwmooc-sc/novice/r/">Reference...</a></li>
     </ul>
   </div>
-  -->
 </div>
 
 <div class="row">
   <div class="col-md-6">
-    <h3>Version Control with Git</h3>
+    <h3>버젼 관리(Git)</h3>
     <ul>
-      <li>Creating a repository</li>
-      <li>Recording changes to files: <code>add</code>, <code>commit</code>, ...</li>
-      <li>Viewing changes: <code>status</code>, <code>diff</code>, ...</li>
-      <li>Ignoring files</li>
-      <li>Working on the web: <code>clone</code>, <code>pull</code>, <code>push</code>, ...</li>
-      <li>Resolving conflicts</li>
-      <li>Open licenses</li>
-      <li>Where to host work, and why</li>
-      <li><a href="{{site.swc_lessons}}/ref/02-git.html">Reference...</a></li>
+    <li>버젼 관리 소개</li>
+    <li>파일에 변경사항 저장: <code>add</code>, <code>commit</code>, ...</li>
+    <li>변경사항 확인: <code>status</code>, <code>diff</code>, ...</li>
+    <li>파일 무시(ignore)</li>
+    <li>웹에서 작업: <code>clone</code>, <code>pull</code>, <code>push</code>, ...</li>
+    <li>충돌(Conflicts) 해결</li>
+    <li>공개 과학(Open Science)</li>
+    <li>협업(Collaboration)</li>
+    <li><a href="http://statkclee.github.io/xwmooc-sc/novice/git/">Reference...</a></li>
     </ul>
   </div>
   <div class="col-md-6">
-    <h3>Managing Data with SQL</h3>
+    <h3>데이터 관리(SQL)</h3>
     <ul>
-      <li>Reading and sorting data</li>
-      <li>Filtering with <code>where</code></li>
-      <li>Calculating new values on the fly</li>
-      <li>Handling missing values</li>
-      <li>Combining values using aggregation</li>
-      <li>Combining information from multiple tables using <code>join</code></li>
-      <li>Creating, modifying, and deleting data</li>
-      <li>Programming with databases</li>
-      <li><a href="{{site.swc_lessons}}/ref/04-sql.html">Reference...</a></li>
+      <li>데이터 선택하기</li>
+      <li>정렬과 중복 제거하기</li>
+      <li>필터링(filtering), <code>where</code></li>
+      <li>새로운 값 계산하기</li>
+      <li>결측 데이터 (Missing Data)</li>
+      <li>집합 (Aggregation)</li>
+      <li>데이터 조합하기, <code>join</code></li>
+      <li>데이터 생성과 변형</li>
+      <li>데이터베이스로 프로그래밍</li>
+      <li><a href="http://statkclee.github.io/xwmooc-sc/novice/sql/">Reference...</a></li>
     </ul>
   </div>
 </div>
@@ -292,367 +317,12 @@ eventbrite: # FIXME (delete this if not used, otherwise uncomment and provide 12
   'tools/check' as well.
 -->
 
-<h2 id="setup">Setup</h2>
+<h2>프로그램 설치</h2>
 
 <p>
-  To participate in a Software Carpentry workshop, you will need 
-  access to the software described below. In addition, you will 
-  need an up-to-date web browser.
-  Once you are done installing the software listed below,
-  please go to <a href="setup/index.html">this page</a>,
-  which has instructions on how to test that everything was installed correctly.
+  소프트웨어 카펜트리 워크샵에 참여하기 위해서 다음에 기술된 소프트웨어를 설치한다.
+  워크샵 시작 <em>전에</em> 모든 소프트웨어가 제대로 설치되었는지 확인해야 한다.
+  (혹은 적어도 설치 프로그램을 다운로드 받아온다.)
 </p>
 
-<div id="editor"> <!-- Start of 'editor' section. -->
-  <h3>Text Editor</h3>
-
-  <p>
-    When you're writing code, it's nice to have a text editor that is
-    optimized for writing code, with features like automatic
-    color-coding of key words.  The default text editor on Mac OS X and
-    Linux is usually set to Vim, which is not famous for being
-    intuitive.  if you accidentally find yourself stuck in it, try
-    typing the escape key, followed by ':q!' (colon, lower-case 'q',
-    exclamation mark), then hitting Return to return to the shell.
-  </p>
-
-  <div class="row">
-    <div class="col-md-4">
-      <h4 id="editor-windows">Windows</h4>
-      <p>
-	<code>nano</code> is the editor installed by the Software
-	Carpentry Installer, it is a basic editor integrated into the
-	lesson material.
-      </p>
-      <p>
-	<a href="http://notepad-plus-plus.org/">Notepad++</a> is a
-	popular free code editor for Windows.  Be aware that you must
-	add its installation directory to your system path in order to
-	launch it from the command line (or have other tools like Git
-	launch it for you).  Please ask your instructor to help you do
-	this.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="editor-macosx">Mac OS X</h4>
-      <p>
-	We recommend
-	<a href="http://www.barebones.com/products/textwrangler/">Text Wrangler</a> or
-	<a href="http://www.sublimetext.com/">Sublime Text</a>.
-	In a pinch, you can use <code>nano</code>,
-	which should be pre-installed.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="editor-linux">Linux</h4>
-      <p>
-	<a href="http://kate-editor.org/">Kate</a> is one option for
-	Linux users.  In a pinch, you can use <code>nano</code>, which
-	should be pre-installed.
-      </p>
-    </div>
-  </div>
-</div> <!-- End of 'editor' section. -->
-
-<div id="shell"> <!-- Start of 'shell' section. -->
-  <h3>The Bash Shell</h3>
-
-  <p>
-    Bash is a commonly-used shell that gives you the power to do simple
-    tasks more quickly.
-  </p>
-
-  <div class="row">
-    <div class="col-md-4">
-      <h4 id="shell-windows">Windows</h4>
-      <p>
-	Install Git for Windows by downloading and running
-	<a href="http://msysgit.github.io/">the installer</a>.
-	This will provide you with both Git and Bash in the Git Bash program.
-      </p>
-      <h4>Software Carpentry Windows Installer</h4>
-      <p>It installs and configures <code>nano</code> (<a href="{{site.swc_github}}/windows-installer">Among other things</a>)</p>
-      <p><em>This installer requires an active internet connection.</em></p>
-      <p>After installing Git Bash:</p>
-      <ul>
-	<li>
-          Download the <a href="{{site.swc_installer}}">Software Carpentry Windows installer</a>.
-	</li>
-	<li>
-          Double click on the file to run it.
-	</li>
-      </ul>
-    </div>
-    <div class="col-md-4">
-      <h4 id="shell-macosx">Mac OS X</h4>
-      <p>
-	The default shell in all versions of Mac OS X is bash, so no
-	need to install anything.  You access bash from the Terminal
-	(found in
-	<code>/Applications/Utilities</code>).  You may want to keep
-	Terminal in your dock for this workshop.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="shell-linux">Linux</h4>
-      <p>
-	The default shell is usually <code>bash</code>, but if your
-	machine is set up differently you can run it by opening a
-	terminal and typing <code>bash</code>.  There is no need to
-	install anything.
-      </p>
-    </div>
-  </div>
-<div> <!-- End of 'shell' section. -->
-
-<div id='git'> <!-- Start of 'Git' section. GitHub browser compatability
-           is given at https://help.github.com/articles/supported-browsers/-->
-  <h3>Git</h3>
-
-  <p>
-    Git is a version control system that lets you track who made changes
-    to what when and has options for easily updating a shared or public
-    version of your code
-    on <a href="https://github.com/">github.com</a>. You will need a
-    <a href="https://help.github.com/articles/supported-browsers/">supported</a>
-    web browser (current versions of Chrome, Firefox or Safari,
-    or Internet Explorer version 9 or above).
-  </p>
-
-  <div class="row">
-    <div class="col-md-4">
-      <h4 id="git-windows">Windows</h4>
-      <p>
-	Git should be installed on your computer as part of your Bash
-	install (described above).
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="git-macosx">Mac OS X</h4>
-      <p>
-	<strong>For OS X 10.8 and higher</strong>, install Git for Mac
-	by downloading and running
-	<a href="http://sourceforge.net/projects/git-osx-installer/files/latest/download">the installer</a>.
-	After installing Git, there will not be anything in your <code>/Applications</code> folder, 
-	as Git is a command line program.
-	<strong>For older versions of OS X (10.5-10.7)</strong> use the
-	most recent available installer for your
-	OS <a href="http://sourceforge.net/projects/git-osx-installer/files/">available
-	  here</a>.  Use the Leopard installer for 10.5 and the Snow
-	Leopard installer for 10.6-10.7.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="git-linux">Linux</h4>
-      <p>
-	If Git is not already available on your machine you can try to
-	install it via your distro's package manager. For Debian/Ubuntu run
-        <code>sudo apt-get install git</code> and for Fedora run
-        <code>sudo yum install git</code>.
-      </p>
-    </div>
-  </div>
-</div> <!-- End of 'Git' section. -->
-
-<div id="python"> <!-- Start of 'Python' section. Remove the third paragraph if
-           the workshop will teach Python using something other than
-           the IPython notebook.
-           Details at http://ipython.org/ipython-doc/2/install/install.html#browser-compatibility -->
-  <h3>Python</h3>
-
-  <p>
-    <a href="http://python.org">Python</a> is a popular language for
-    scientific computing, and great for general-purpose programming as
-    well.  Installing all of its scientific packages individually can be
-    a bit difficult, so we recommend an all-in-one installer.
-  </p>
-
-    <p>
-      Regardless of how you choose to install it,
-      <strong>please make sure you install Python version 2.x and not version 3.x</strong>
-      (e.g., 2.7 is fine but not 3.4).
-      Python 3 introduced changes that will break some of the code we teach during the workshop.
-    </p>
-
-    <p>
-      We will teach Python using the IPython notebook, a programming environment
-      that runs in a web browser. For this to work you will need a reasonably
-      up-to-date browser. The current versions of the Chrome, Safari and
-      Firefox browsers are all <a 
-      href='http://ipython.org/ipython-doc/2/install/install.html#browser-compatibility'>supported</a> 
-      (some older browsers, including Internet Explorer version 9 
-      and below, are not).
-    </p>
-
-  <div class="row">
-    <div class="col-md-4">
-      <h4 id="python-windows">Windows</h4>
-      <ul>
-	<li>
-          Download and
-          install <a href="https://store.continuum.io/cshop/anaconda/">Anaconda</a>.
-	</li>
-	<li>
-          Download the default Python 2 installer (do not follow the link to version 3).
-	  Use all of the defaults for installation
-          <em>except</em> make sure to check
-	  <strong>Make Anaconda the default Python</strong>.
-	</li>
-      </ul>
-    </div>
-    <div class="col-md-4">
-      <h4 id="python-macosx">Mac OS X</h4>
-      <ul>
-	<li>
-          Download and
-          install <a href="https://store.continuum.io/cshop/anaconda/">Anaconda</a>.
-	</li>
-	<li>
-          Download the default Python 2 installer (do not follow the link to version 3).
-	  Use all of the defaults for installation.
-	</li>
-      </ul>
-    </div>
-    <div class="col-md-4">
-      <h4 id="python-linux">Linux</h4>
-      <p>
-	We recommend the all-in-one scientific Python installer
-	<a href="http://continuum.io/downloads.html">Anaconda</a>.
-	(Installation requires using the shell and if you aren't
-	comfortable doing the installation yourself just
-	download the installer and we'll help you at the boot
-	camp.)
-      </p>
-      <ol>
-	<li>
-          Download the installer that matches your operating
-          system and save it in your home folder.
-	  Download the default Python 2 installer (do not follow the link to version 3). 
-	</li>
-	<li>
-          Open a terminal window.
-	</li>
-	<li>
-          Type <pre>bash Anaconda-</pre> and then press
-          tab. The name of the file you just downloaded should
-          appear.
-	</li>
-	<li>
-          Press enter. You will follow the text-only prompts.  When
-          there is a colon at the bottom of the screen press the down
-          arrow to move down through the text. Type <code>yes</code> and
-          press enter to approve the license. Press enter to approve the
-          default location for the files. Type <code>yes</code> and
-          press enter to prepend Anaconda to your <code>PATH</code>
-          (this makes the Anaconda distribution the default Python).
-	</li>
-      </ol>
-    </div>
-  </div>
-</div> <!-- End of 'Python' section. -->
-
-<div id="r"> <!-- Start of 'R' section. -->
-  <h3>R</h3>
-
-  <p>
-    <a href="http://www.r-project.org">R</a> is a programming language
-    that is especially powerful for data exploration, visualization, and
-    statistical analysis. To interact with R, we use
-    <a href="http://www.rstudio.com/">RStudio</a>.
-  </p>
-
-  <div class="row">
-    <div class="col-md-4">
-      <h4 id="r-windows">Windows</h4>
-      <p>
-	Install R by downloading and running
-	<a href="http://cran.r-project.org/bin/windows/base/release.htm">this .exe file</a>
-	from <a href="http://cran.r-project.org/index.html">CRAN</a>.
-	Also, please install the
-	<a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="r-macosx">Mac OS X</h4>
-      <p>
-	Install R by downloading and running
-	<a href="http://cran.r-project.org/bin/macosx/R-latest.pkg">this .pkg file</a>
-	from <a href="http://cran.r-project.org/index.html">CRAN</a>.
-	Also, please install the
-	<a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="r-linux">Linux</h4>
-      <p>
-	You can download the binary files for your distribution
-	from <a href="http://cran.r-project.org/index.html">CRAN</a>. Or
-	you can use your package manager (e.g. for Debian/Ubuntu
-	run <code>sudo apt-get install r-base</code> and for Fedora run
-        <code>sudo yum install R</code>).  Also, please install the
-	<a href="http://www.rstudio.com/ide/download/desktop">RStudio IDE</a>.
-      </p>
-    </div>
-  </div>
-</div> <!-- End of 'R' section. -->
-
-<div id="sql"> <!-- Start of 'SQLite' section. -->
-  <h3>SQLite</h3>
-
-  <p>
-    SQL is a specialized programming language used with databases.  We
-    use a simple database manager called
-    <a href="http://www.sqlite.org/">SQLite</a> in our lessons.
-  </p>
-
-  <div class="row">
-    <div class="col-md-4">
-      <h4 id="sql-windows">Windows</h4>
-      <p>
-      The <a href="{{site.swc_github}}/windows-installer">Software Carpentry
-          Windows Installer</a> installs <code>sqlite3</code> for Windows. If
-      you used the installer to configure `nano`, you don't need to run it again.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="sql-macosx">Mac OS X</h4>
-      <p>
-	<code>sqlite3</code> comes pre-installed on Mac OS X.
-      </p>
-    </div>
-    <div class="col-md-4">
-      <h4 id="sql-linux">Linux</h4>
-      <p>
-	<code>sqlite3</code> comes pre-installed on Linux.
-      </p>
-    </div>
-  </div>
-</div> <!-- End of 'SQLite' section. -->
-
-<!--
-  Uncomment this section if you are using our virtual machine.
-
-<div id="vm">
-  <h3>Virtual Machine</h3>
-
-  <p>
-    Some instructors prefer to have learners use a virtual machine (VM)
-    rather than install software on their own computers.  If your
-    instructors have chosen to do this, please:
-  </p>
-  <ol>
-    <li>
-      Install <a href="https://www.virtualbox.org/">VirtualBox</a>.
-    </li>
-    <li>
-      Download our <a href="{{site.swc_vm}}">VM image</a>.
-      <strong>Warning:</strong> this file is 1.7 GByte, so please
-      download it <em>before</em> coming to your workshop.
-    </li>
-    <li>
-      Load the VM into VirtualBox by selecting "Import Appliance" and
-      loading the <code>.ova</code> file.
-    </li>
-  </ol>
-</div>
--->
+{% include setup.html %}
